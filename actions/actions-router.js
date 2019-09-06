@@ -36,8 +36,22 @@ router.get('/:id', (req, res) => {
 });
 router.post('/', (req, res) => {
     
+    
 });
 router.delete('/', (req, res) => {
+    // Actions.remove(req.params.id)
+    // .then(count =>{
+    //     if(count && count > 0){
+    //         res.status(200).json({message: "the action was successfully deleted"})
+    //     } else {
+    //         res.status(404).json({errorMessage: "the action with the specified ID does not exists"})
+
+    //     }
+    // })
+    // .catch(err =>{
+    //     console.log("error in delete action", err)
+    //     res.status(500).json({errorMessage: "there was a problem deleting the action"})
+    // })
     
 });
 router.put('/', (req, res) => {
