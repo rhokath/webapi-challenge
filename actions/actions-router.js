@@ -97,7 +97,7 @@ router.put('/:id', (req, res) => {
     
 });
 
-//validate action
+//validate actiongit a
 function validatePostingAction(req, res, next){
     const { id : project_id} = req.params;
     const { description, notes} = req.body;
