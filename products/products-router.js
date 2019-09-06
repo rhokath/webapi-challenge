@@ -16,6 +16,25 @@ router.get('/', (req, res)=>{
         })
     })
 })
+//get all actions for a product
+router.get('/:id/actions', (req,res)=>{
+    Products.getProjectActions(req.params.id)
+    .then(actions => {
+        if(actions.length){
+            res.status(200).json(actions);
+        } else {
+            res.status(404).json({
+                message: "The actions with the specified  project ID do not exists."
+            })
+        }
+    })
+    .catch((err)=>{
+        console.log("err in getting actions for project", err)
+        res.status(500).json({
+            error: "The actions information for the project could not be retrieved."
+        })
+    })
+})
 router.get('/:id', (req, res) => {
     const {id}= req.params;
     Products.get(id)
