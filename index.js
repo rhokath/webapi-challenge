@@ -12,3 +12,7 @@ I need this code, just don't know where, perhaps should make some middleware, do
 
 Go code!
 */
+const server = require('./api/server');
+
+const port = 4444;
+server.listen(port, ()=> console.log(`\n*** API on port ${port} running ***\n`))
